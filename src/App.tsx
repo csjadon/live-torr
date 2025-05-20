@@ -1,5 +1,6 @@
 import { useEffect } from 'react';
 import Header from './components/layout/Header';
+import { Helmet } from 'react-helmet';
 import Footer from './components/layout/Footer';
 import Hero from './components/sections/Hero';
 import Mission from './components/sections/Mission';
@@ -26,6 +27,11 @@ function App() {
 
   return (
     <div className="flex flex-col min-h-screen bg-white">
+      <Helmet>
+        <title>The One Rupee Revolution</title>
+        <meta name="description" content="Join the One Rupee Revolution and make a difference with just one rupee." />
+        <meta name="keywords" content="NGO, HELP, one rupee, revolution, organisation, foundation organisation, shelter, humanity, need," />
+      </Helmet>
       <Header />
       <main className="flex-grow">
         <Hero />
