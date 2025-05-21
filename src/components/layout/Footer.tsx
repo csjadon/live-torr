@@ -17,7 +17,7 @@ const Footer = () => {
               can solve major global challenges.
             </p>
             <Button 
-              href="#donate" 
+              href="/donate" 
               icon={<Heart size={16} />}
               variant="secondary"
               size="small"
@@ -31,32 +31,32 @@ const Footer = () => {
             <h3 className="text-xl font-bold mb-4">Navigation</h3>
             <ul className="space-y-2">
               <li>
-                <a href="#mission" className="text-blue-100 hover:text-white transition">
+                <a href="/mission" className="text-blue-100 hover:text-white transition">
                   Our Mission
                 </a>
               </li>
               <li>
-                <a href="#who-we-are" className="text-blue-100 hover:text-white transition">
+                <a href="/who-we-are" className="text-blue-100 hover:text-white transition">
                   Who We Are
                 </a>
               </li>
               <li>
-                <a href="#how-it-works" className="text-blue-100 hover:text-white transition">
+                <a href="/how-it-works" className="text-blue-100 hover:text-white transition">
                   How It Works
                 </a>
               </li>
               <li>
-                <a href="#impact" className="text-blue-100 hover:text-white transition">
+                <a href="/impact" className="text-blue-100 hover:text-white transition">
                   Impact Dashboard
                 </a>
               </li>
               <li>
-                <a href="#stories" className="text-blue-100 hover:text-white transition">
+                <a href="/stories" className="text-blue-100 hover:text-white transition">
                   Stories of Hope
                 </a>
               </li>
               <li>
-                <a href="#join" className="text-blue-100 hover:text-white transition">
+                <a href="/join" className="text-blue-100 hover:text-white transition">
                   Join The Revolution
                 </a>
               </li>
