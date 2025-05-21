@@ -1,33 +1,17 @@
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import { Menu, X, Heart } from 'lucide-react';
 import Button from '../ui/Button';
 import Logo from '../ui/Logo';
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [isScrolled, setIsScrolled] = useState(false);
-
-  useEffect(() => {
-    const handleScroll = () => {
-      setIsScrolled(window.scrollY > 20);
-    };
-
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
   };
 
   return (
-    <header
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled
-          ? 'bg-white shadow-md py-2'
-          : 'bg-transparent py-4'
-      }`}
-    >
+    <header className={`fixed top-0 left-0 right-0 z-50 bg-white shadow-md py-2`}>
       <div className="container mx-auto px-4 flex justify-between items-center">
         <Logo />
 
@@ -79,65 +63,65 @@ const Header = () => {
         } overflow-hidden`}
       >
         <div className="container mx-auto px-4 py-4 flex flex-col space-y-4">
-          <a 
-            href="#mission" 
+          <a
+            href="#mission"
             className="text-gray-900 hover:text-blue-900 font-medium py-2"
             onClick={() => setIsMenuOpen(false)}
           >
             Mission
           </a>
-          <a 
-            href="#who-we-are" 
+          <a
+            href="#who-we-are"
             className="text-gray-900 hover:text-blue-900 font-medium py-2"
             onClick={() => setIsMenuOpen(false)}
           >
             Who We Are
           </a>
-          <a 
-            href="#how-it-works" 
+          <a
+            href="#how-it-works"
             className="text-gray-900 hover:text-blue-900 font-medium py-2"
             onClick={() => setIsMenuOpen(false)}
           >
             How It Works
           </a>
-          <a 
-            href="#impact" 
+          <a
+            href="#impact"
             className="text-gray-900 hover:text-blue-900 font-medium py-2"
             onClick={() => setIsMenuOpen(false)}
           >
             Impact
           </a>
-          <a 
-            href="#stories" 
+          <a
+            href="#stories"
             className="text-gray-900 hover:text-blue-900 font-medium py-2"
             onClick={() => setIsMenuOpen(false)}
           >
             Stories
           </a>
-          <a 
-            href="#voting" 
+          <a
+            href="#voting"
             className="text-gray-900 hover:text-blue-900 font-medium py-2"
             onClick={() => setIsMenuOpen(false)}
           >
             Vote
           </a>
-          <a 
-            href="#fundraiser" 
+          <a
+            href="#fundraiser"
             className="text-gray-900 hover:text-blue-900 font-medium py-2"
             onClick={() => setIsMenuOpen(false)}
           >
             Fundraiser
           </a>
-          <a 
-            href="#join" 
+          <a
+            href="#join"
             className="text-gray-900 hover:text-blue-900 font-medium py-2"
             onClick={() => setIsMenuOpen(false)}
           >
             Join
           </a>
-          <Button 
-            href="#donate" 
-            icon={<Heart size={16} />} 
+          <Button
+            href="#donate"
+            icon={<Heart size={16} />}
             onClick={() => setIsMenuOpen(false)}
             fullWidth
           >

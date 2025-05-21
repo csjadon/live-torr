@@ -1,3 +1,4 @@
+//import React from 'react';
 import { ArrowDown, Heart } from 'lucide-react';
 import Button from '../ui/Button';
 import Slider from "react-slick";
@@ -24,26 +25,22 @@ const Hero = () => {
   };
 
   const images = [
-    { url: 'placeholder_image_1.jpg', alt: 'Image 1' },
-    { url: 'placeholder_image_2.jpg', alt: 'Image 2' },
-    { url: 'placeholder_image_3.jpg', alt: 'Image 3' },
+    { url: 'https://images.pexels.com/photos/6646918/pexels-photo-6646918.jpeg?auto=compress&cs=tinysrgb&w=1600', alt: 'One Rupee Revolution Image 1' },
+    { url: 'https://images.pexels.com/photos/6647021/pexels-photo-6647021.jpeg?auto=compress&cs=tinysrgb&w=1600', alt: 'One Rupee Revolution Image 2' },
+    { url: 'placeholder_image_3.jpg', alt: 'One Rupee Revolution Image 3' }, // You can replace this
   ];
 
   return (
     <section className="min-h-screen flex items-center justify-center relative text-white overflow-hidden">
-      <div
-        className="absolute inset-0 z-0 opacity-10" 
-        style={{ 
-          backgroundImage: 'repeating-linear-gradient(45deg, transparent, transparent 10px, rgba(255,255,255,0.1) 10px, rgba(255,255,255,0.1) 20px)'
-        }}
-      ></div>
-
-      {/* Content container */}
       {/* Slider Background */}
       <div className="absolute inset-0 z-0">
         <Slider {...settings}>
           {images.map((image, index) => (
-            <div key={index} className="w-full h-screen bg-cover bg-center" style={{ backgroundImage: `url(${image.url})` }}>
+            <div
+              key={index}
+              className="w-full h-screen bg-cover bg-center"
+              style={{ backgroundImage: `url(${image.url})` }}
+            >
               {/* Optional: Add an overlay for better text readability */}
               <div className="absolute inset-0 bg-black opacity-50"></div>
             </div>
@@ -74,9 +71,9 @@ const Hero = () => {
             Learn More
           </Button>
         </div>
-        
+
         <div className="absolute bottom-10 left-0 right-0 flex justify-center animate-bounce">
-          <button 
+          <button
             onClick={scrollToMission}
             className="text-white hover:text-gray-200 focus:outline-none transition"
             aria-label="Scroll down"

@@ -2,7 +2,8 @@ import { useEffect } from 'react';
 import Header from './components/layout/Header';
 import { Helmet } from 'react-helmet';
 import Footer from './components/layout/Footer';
-import Hero from './components/sections/Hero';
+//import Hero from './components/sections/Hero';
+import HeroSlider from './components/sections/HeroSlider';
 import Mission from './components/sections/Mission';
 import WhoWeAre from './components/sections/WhoWeAre';
 import HowItWorks from './components/sections/HowItWorks';
@@ -34,7 +35,7 @@ function App() {
       </Helmet>
       <Header />
       <main className="flex-grow">
-        <Hero />
+        <HeroSlider />
         <Mission />
         <WhoWeAre />
         <HowItWorks />
